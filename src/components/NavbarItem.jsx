@@ -1,7 +1,7 @@
-export function NavbarItem({ href, text }) {
+export function NavbarItem({ href, text, handleClick }) {
   return (
     <li>
-      <a href={href}
+      <a href={href} onClick={handleClick}
         className={`
           text-white font-bold
           hover:bg-[#00FFF0]

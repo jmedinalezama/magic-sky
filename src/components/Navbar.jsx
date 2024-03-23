@@ -51,11 +51,11 @@ export function Navbar() {
           md:opacity-100 md:pointer-events-auto
           md:w-full
         `}>
-          <NavbarItem href="#decoraciones" text="Decoraciones"/>
-          <NavbarItem href="#galeria" text="Galería"/>
-          <NavbarItem href="#testimonios" text="Testimonios"/>
-          <NavbarItem href="#nosotros" text="Conócenos"/>
-          <NavbarItem href="#contacto" text="Contacto"/>
+          <NavbarItem handleClick={handleToggleMenu} href="#decoraciones" text="Decoraciones"/>
+          <NavbarItem handleClick={handleToggleMenu} href="#galeria" text="Galería"/>
+          <NavbarItem handleClick={handleToggleMenu} href="#testimonios" text="Testimonios"/>
+          <NavbarItem handleClick={handleToggleMenu} href="#nosotros" text="Conócenos"/>
+          <NavbarItem handleClick={handleToggleMenu} href="#contacto" text="Contacto"/>
         </ul>
       </section>
     </nav>
