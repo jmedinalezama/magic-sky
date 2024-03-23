@@ -1,0 +1,46 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import AboutItem from "./AboutItem.astro";
+---
+
+<section class="max-w-[1200px] mx-auto pb-6" id="nosotros">
+  <SectionTitle title="Conócenos" subtitle="¿Quiénes somos?" />
+
+  <div
+    class="flex flex-col justify-center gap-y-6 w-full px-4 sm:flex-row sm:gap-x-6 sm:justify-around mx-auto"
+  >
+    <AboutItem
+      src="/galery/3.jpeg"
+      name="Thalia Leiva"
+      href="https://www.instagram.com/thalia.leiva.9/"
+    >
+      <p class="text-white max-w-[400px] mx-auto text-pretty">
+        <span class="italic text-white/90">Creadora, inspiradora</span> y <span
+          class="font-bold text-sky-300"
+          >organizadora de increíbles fiestas</span
+        >, dando siempre el respaldo de <span class="italic text-white/90"
+          >calidad, creatividad</span
+        > y <span class="font-bold text-sky-300">profesionalismo</span>
+        en cada uno de nuestros eventos.
+      </p>
+    </AboutItem>
+
+    <AboutItem
+      src="/images/liseth.jpeg"
+      name="Liseth Leiva"
+      href="https://www.instagram.com/liseth20leiva/"
+    >
+      <p class="text-white max-w-[400px] mx-auto text-pretty">
+        <span class="italic text-white/90">Detallista</span>, <span
+          class="italic text-white/90">dedicada</span
+        > y <span class="font-bold text-sky-300"
+          >profesional en cada evento</span
+        >, creamos <span class="italic text-white/90">experiencias únicas</span>
+        con un estándar de calidad excepcional . Nuestro <span
+          class="font-bold text-sky-300">compromiso y dedicación</span
+        >
+        asegurados.
+      </p>
+    </AboutItem>
+  </div>
+</section>

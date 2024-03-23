@@ -1,0 +1,64 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import GaleryItem from "./GaleryItem.astro";
+---
+
+<section class="max-w-[1200px] mx-auto pb-6" id="galeria">
+  <SectionTitle title="Galería" subtitle="Nuestro trabajo" />
+
+  <div class="px-4">
+    <article
+      class={`
+      grid grid-cols-1 gap-y-2 
+      sm:grid-cols-2 sm:gap-x-2
+      lg:grid-cols-4 lg:auto-rows-[250px] xl:auto-rows-[300px] 
+    `}
+    >
+      <GaleryItem
+        class="sm:col-span-2"
+        src="/galery/1.jpeg"
+        alt="temática hawaiana"
+      />
+
+      <GaleryItem src="/galery/2.jpeg" alt="temática hawaiana y luces" />
+
+      <GaleryItem src="/galery/3.jpeg" alt="decoración de cumpleaños" />
+
+      <GaleryItem
+        class="sm:col-span-2 lg:order-2 lg:row-span-2"
+        src="/galery/4.jpeg"
+        alt="decoración personalizada con colores vibrantes y atractivos"
+      />
+
+      <GaleryItem
+        class="lg:order-1"
+        src="/galery/5.jpeg"
+        alt="temática hawaina"
+      />
+
+      <GaleryItem
+        class="lg:order-2 lg:row-start-3 lg:col-start-1"
+        src="/galery/6.jpeg"
+        alt="decoración exclusiva con una combinación de colores brillantes y cautivadores"
+      />
+
+      <GaleryItem
+        class="sm:col-span-2 lg:order-5"
+        src="/galery/7.png"
+        alt="temática hawaiana"
+      />
+
+      <GaleryItem
+        class="lg:order-5 lg:row-start-2 lg:col-start-4 lg:row-end-4"
+        src="/galery/8.jpeg"
+        alt="decoración de cumpleaños personalizada y con detalles únicos"
+      />
+
+      <GaleryItem
+        class="lg:order-5 lg:col-span-2"
+        src="/galery/9.jpeg"
+        alt="estilos y decoraciones únicos"
+      />
+    </article>
+  </div>
+</section>

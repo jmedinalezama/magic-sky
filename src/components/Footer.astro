@@ -1,0 +1,52 @@
+---
+import FacebookIcon from "../icons/FacebookIcon.astro";
+import InstagramIcon from "../icons/InstagramIcon.astro";
+import TiktokIcon from "../icons/TiktokIcon.astro";
+import SectionTitle from "./SectionTitle.astro";
+import WhatsappIcon from "../icons/WhatsappIcon.astro";
+---
+
+<footer id="contacto">
+  <section class="max-w-[1200px] mx-auto pb-6" id="nosotros">
+    <SectionTitle title="Nuestras redes sociales" subtitle="Síguenos en" />
+
+    <div class="flex justify-around items-center max-w-[400px] mx-auto">
+      <a
+        href="https://www.facebook.com/thalia.leiva.9"
+        target="_blank"
+        rel="noreferrer noopenner"
+        class="hover:scale-110 transition duration-500 grayscale hover:grayscale-0 animate-bounce"
+        ><FacebookIcon class="size-8" /></a
+      >
+      <a
+        href="https://www.instagram.com/thalia.leiva.9/"
+        target="_blank"
+        rel="noreferrer noopenner"
+        class="hover:scale-110 transition duration-500 grayscale hover:grayscale-0 animate-bounce"
+        ><InstagramIcon class="size-8" /></a
+      >
+      <a
+        href="https://www.tiktok.com/@magicski_"
+        target="_blank"
+        rel="noreferrer noopenner"
+        class="hover:scale-110 transition duration-500 grayscale hover:grayscale-0 animate-bounce"
+        ><TiktokIcon class="size-8" /></a
+      >
+      <a
+        href="https://wa.me/51926262124/?text=Hola,%20más%20%20información,%20por%20favor."
+        target="_blank"
+        rel="noreferrer noopenner"
+        class="hover:scale-110 transition duration-500 grayscale hover:grayscale-0 animate-bounce"
+      >
+        <WhatsappIcon class="size-8" /></a
+      >
+    </div>
+
+    <span class="block w-full text-white text-center pt-16 pb-2 px-4">
+      Todos los derechos reservados &#169; | 2024 - <span
+        class="text-[#FF00C7] font-black italic">Magic</span
+      >
+      <span class="text-[#00FFF0] font-black italic">Sky</span>
+    </span>
+  </section>
+</footer>

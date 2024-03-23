@@ -1,0 +1,13 @@
+---
+const { src, alt } = Astro.props;
+---
+
+<div
+  class={`
+        rounded-xl overflow-hidden shadow-lg shadow-rose-500/30
+        md:grayscale md:hover:grayscale-0 transition duration-300
+        ${Astro.props.class}
+      `}
+>
+  <img class="object-cover w-full h-full" src={src} alt={alt} />
+</div>

@@ -1,0 +1,10 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import { TestimonialSlider } from "./TestimonialSlider.jsx";
+---
+
+<section class="max-w-[1200px] mx-auto pb-6" id="testimonios">
+  <SectionTitle title="Testimonios" subtitle="Trabajamos juntos" />
+
+  <TestimonialSlider client:visible />
+</section>

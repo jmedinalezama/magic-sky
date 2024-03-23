@@ -1,0 +1,121 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import ServiceItem from "./ServiceItem.astro";
+---
+
+<section class="max-w-[1200px] mx-auto" id="decoraciones">
+  <SectionTitle title="Decoraciones" subtitle="¿Qué te ofrecemos?" />
+
+  <article class="px-4">
+    <!-- cumpleaños -->
+    <ServiceItem
+      class="box-service translate-y-12 max-w-[1000px] mx-auto md:items-start transition duration-300"
+    >
+      <div class="md:w-[30%]">
+        <img
+          src="/images/happy.jpeg"
+          alt="Decoraciones de cumpleaños, hechos a gustos del cliente por Magic Sky"
+          class="rounded-lg shadow-md w-full max-w-[250px] mx-auto md:ml-0"
+        />
+      </div>
+      <aside class="md:w-[70%]">
+        <h5
+          class="text-[#00FFF0] text-center text-xl font-bold my-2 md:text-left md:my-0"
+        >
+          Cumpleaños
+        </h5>
+        <p class="text-white font-normal text-pretty mt-4 text-lg">
+          ¡Celebra tu cumpleaños de manera especial con nuestras decoraciones
+          personalizadas! Desde temáticas clásicas hasta las más extravagantes,
+          creamos ambientes mágicos y llenos de color que harán de tu día un
+          momento inolvidable. Nuestro equipo se encarga de cada detalle,
+          asegurando que tu fiesta sea única y llena de alegría. ¡Déjanos hacer
+          de tu cumpleaños un día realmente especial!
+        </p>
+      </aside>
+    </ServiceItem>
+
+    <!-- bodas -->
+    <ServiceItem
+      class="box-service translate-y-12 max-w-[1000px] mx-auto md:items-start md:mt-4 transition duration-300"
+    >
+      <div class="md:w-[30%] md:order-1">
+        <img
+          src="/images/matrimonio.jpeg"
+          alt="Decoraciones de bodas civiles, religiosas y más."
+          class="rounded-lg shadow-md w-full max-w-[250px] mx-auto md:mr-0"
+        />
+      </div>
+      <aside class="md:w-[70%]">
+        <h5
+          class="text-[#00FFF0] text-center text-xl font-bold my-2 md:text-right md:my-0"
+        >
+          Bodas
+        </h5>
+        <p
+          class="text-white font-normal text-lg text-pretty mt-4 md:text-right"
+        >
+          Embellece el día más importante de tu vida con nuestras exclusivas
+          decoraciones para bodas. Desde ceremonias íntimas hasta grandes
+          celebraciones, creamos ambientes románticos y sofisticados que
+          reflejan tu estilo y amor. Cada detalle es cuidadosamente seleccionado
+          para crear una atmósfera única y memorable. Confía en nosotros para
+          hacer de tu boda un evento inolvidable y lleno de amor.
+        </p>
+      </aside>
+    </ServiceItem>
+
+    <!-- sorpresas y detalles -->
+    <ServiceItem
+      class="box-service translate-y-12 max-w-[1000px] mx-auto md:items-start md:mt-4 transition duration-300"
+    >
+      <div class="md:w-[30%]">
+        <img
+          src="/images/sorpresa.jpeg"
+          alt="Sorpresas y detalles hechos con inspiración y mucho amor"
+          class="rounded-lg shadow-md w-full max-w-[250px] mx-auto md:ml-0"
+        />
+      </div>
+      <aside class="md:w-[70%]">
+        <h5
+          class="text-[#00FFF0] text-center text-xl font-bold my-2 md:text-left md:my-0"
+        >
+          Sorpresas y detalles
+        </h5>
+        <p class="text-white font-normal text-lg text-pretty mt-4">
+          Sorprende a tus seres queridos con nuestras originales sorpresas y
+          detalles. Desde regalos personalizados hasta experiencias únicas,
+          creamos momentos especiales llenos de emoción y alegría. Nuestro
+          objetivo es hacer que cada sorpresa sea inolvidable, transmitiendo
+          amor y felicidad en cada detalle. Déjanos ser parte de tus momentos
+          más especiales y crear recuerdos que perdurarán para siempre.
+        </p>
+      </aside>
+    </ServiceItem>
+  </article>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const $servicesBox = document.querySelectorAll(".box-service");
+
+    const checkVisibility = () => {
+      $servicesBox.forEach((el) => {
+        let top = el.getBoundingClientRect().top;
+        let bottom = el.getBoundingClientRect().bottom;
+        let x = window.innerHeight;
+
+        if (top + window.innerHeight / 6 < window.innerHeight && bottom >= 0) {
+          el.classList.remove("translate-y-12");
+        } else {
+          el.classList.add("translate-y-12");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("resize", checkVisibility);
+
+    checkVisibility();
+  });
+</script>
